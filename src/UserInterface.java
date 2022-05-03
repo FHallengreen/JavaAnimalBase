@@ -54,7 +54,7 @@ public class UserInterface {
     }
 
     private void exit() {
-        // TODO: Maybe save before exiting???
+        save();
         System.out.println("Thank you for using ANIMALBASE 2022");
         System.out.println("Please consider upgrading to Enterprise Edition!");
         System.out.println("Subscribe to our newsletter with all the details you need about creating lists of animals!");
@@ -158,13 +158,13 @@ public class UserInterface {
         }
     }
 
-    private void load() throws FileNotFoundException {
+    private void load() {
         System.out.println("Loading the database ...");
         application.loadDatabase();
         System.out.println("Done!");
     }
 
-    private void save() throws FileNotFoundException {
+    private void save() {
         System.out.println("Saving the database ...");
         application.saveDatabase();
         System.out.println("Saving database completed succesfully");

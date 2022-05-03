@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class FileHandler {
 
     public void loadAnimalsToFile(ArrayList<Animal> animals) throws FileNotFoundException {
-        Scanner fileScanner = new Scanner(new File("animalss.csv"));
+        Scanner fileScanner = new Scanner(new File("animals.csv"));
         while  (fileScanner.hasNextLine()){
             String line = fileScanner.nextLine();
             Scanner input = new Scanner(line).useDelimiter(";").useLocale(Locale.ENGLISH);

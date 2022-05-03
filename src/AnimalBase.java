@@ -68,9 +68,12 @@ public class AnimalBase {
         }
     }
 
-    public void saveDatabase() throws FileNotFoundException {
-
+    public void saveDatabase() {
+        try {
         handler.saveAnimalsToFile(animals);
-
+        }
+        catch (FileNotFoundException e){
+            System.out.println(e);
+        }
     }
 }
